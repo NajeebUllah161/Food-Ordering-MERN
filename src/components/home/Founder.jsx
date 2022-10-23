@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import me from "../../assets/founder.webp";
+import me from "../../assets/profile.jpeg";
 
 const Founder = () => {
   const options = {
@@ -17,9 +17,9 @@ const Founder = () => {
     <section className="founder">
       <motion.div {...options}>
         <img src={me} alt="Founder" height={200} width={200} />
-        <h3>Abhishek Singh</h3>
+        <h3>Najeeb Ullah Khan</h3>
         <p>
-          Hey, Everyone I am Abhishek Singh, the founder of MBA Burger Wala.
+          Hey, Everyone I am Najeeb Ullah Khan, the founder of MBA Burger Wala.
           <br />
           Our aim is to make the most tasties burgers on planet
         </p>
