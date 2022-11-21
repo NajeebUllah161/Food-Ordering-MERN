@@ -1,4 +1,5 @@
 import React from "react";
+import { Country, State } from "country-state-city";
 
 const Shipping = () => {
   return (
@@ -19,7 +20,12 @@ const Shipping = () => {
             <label>Country</label>
             <select>
               <option value="">Country</option>
-              <option value="">Pakistan</option>
+              {Country &&
+                Country.getAllCountries().map((i) => (
+                  <option value={i.isoCode} key={i.isoCode}>
+                    {i.name}
+                  </option>
+                ))}
             </select>
           </div>
 
@@ -27,7 +33,12 @@ const Shipping = () => {
             <label>State</label>
             <select>
               <option value="">State</option>
-              <option value="">KPK</option>
+              {State &&
+                State.getStatesOfCountry("PK").map((i) => (
+                  <option value={i.isoCode} key={i.isoCode}>
+                    {i.name}
+                  </option>
+                ))}
             </select>
           </div>
 
